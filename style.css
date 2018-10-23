@@ -419,6 +419,51 @@ border-radius: 50%;
 background-color: black;
 }
 
+/* click to scroll style */
+
+.clicktoscroll{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 0;
+    transition: 1s;
+}
+.clickToScrolltext{
+    height: 10%;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: 'Caveat Brush', cursive;
+    font-size: 2vw;
+    text-decoration: none;
+    color: black;
+}
+.clickToScrollIMG{
+    height: 10%;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.clickToScrollIMG img{
+    height: auto;
+    width: 7%;
+    margin: 0;
+    padding: 0;
+}
+
 
 /* page 2 */
 .page2{

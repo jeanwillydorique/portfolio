@@ -13,6 +13,8 @@ let slide1 = document.querySelector("#slide1");
 let start = document.querySelector('.start'); // button test animation slide 1
 // let page2 = document.querySelector(".page2");
 // let gotop = document.querySelector(".gotop");
+let clickToScroll = document.querySelector('.clicktoscroll');
+let clickToScrollText = document.querySelector('.clickToScrolltext');
 
 
 // page2.addEventListener ('scroll', function(){
@@ -145,6 +147,7 @@ function animaToandMy(){
     to.style.transform = "translateY(0)";
     my.style.opacity = "1";
     my.style.transform = "translateY(0)";
+    clickToScroll.style.opacity = "1";
 }
 
 function reset() {
@@ -185,6 +188,7 @@ function animslide2 (){
 function djwcadrefunction (){
     djwcadre.style.opacity = "1";
     djwcadre.style.transform = "scale(1.2)";
+    clickToScrollText.style.color = "white";
 }
 
 function djwtext1function (){
@@ -201,6 +205,7 @@ function resetdjwfunction() {
     doriquejeanwilly.style.transform = "scale(0.6)";
     marketingdeveloppement.style.opacity = "0";
     marketingdeveloppement.style.transform = "scale(0.6)";
+    clickToScrollText.style.color = "black";
 } 
 
 function slider() {
