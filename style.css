@@ -40,6 +40,17 @@ section{
     /*background-image: url(./Images/fond/swirl.png);*/
 }
 
+
+/* flip function */
+
+.flip-box_flip {
+    transform: rotateY(180deg);
+  } 
+
+  .flip-box_flipreserve {
+    transform: rotateY(-180deg);
+  } 
+
 /* Page 1 */
 
 .page1{
@@ -366,10 +377,10 @@ p{
   
 .navigation {
 height: 100%;
-width: 8%;
+width: 20%;
 position: fixed;
 bottom: 42%;
-left: 90%;
+left: 80%;
 z-index: 3;
 opacity: 0;
 transition: 0.5s;
@@ -495,26 +506,53 @@ background-color: black;
     transform-style: preserve-3d;
   }
   
-  .flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg);
-  }
   
   .flip-box-front, .flip-box-back {
     position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     backface-visibility: hidden;
   }
+
+
   
   .flip-box-front {
     background-color: white;
     color: black;
   }
+
+  #fbfpage2_1{
+    /* The image used */
+        
+    background-image: url("Images/f.jpg");
+
+    /* Full height */
+    height: 100%; 
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #fbfpage2_2{
+    /* The image used */
+        
+    background-image: url("Images/delicate-arch-960279.jpg");
+
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   
   .flip-box-back {
+    
     background-color: dodgerblue;
     color: white;
     transform: rotateY(180deg);
@@ -555,9 +593,6 @@ background-color: black;
     transform-style: preserve-3d;
   }
   
-  .flip-boxP4:hover .flip-box-innerP4 {
-    transform: rotateY(180deg);
-  }
   
   .flip-box-frontP4, .flip-box-backP4 {
     position: absolute;
@@ -611,12 +646,6 @@ background-color: black;
     transform-style: preserve-3d;
   }
   
-  .flip-boxP51:hover .flip-box-innerP51 {
-    transform: rotateY(180deg);
-  }
-  .flip-boxP52:hover .flip-box-innerP52 {
-    transform: rotateY(180deg);
-  }
   
   .flip-box-frontP51,  .flip-box-backP51 {
     position: absolute;

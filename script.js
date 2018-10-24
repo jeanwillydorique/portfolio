@@ -243,6 +243,7 @@ function slider() {
 
 let dotlink = document.querySelectorAll(".textlink");
 let textlink = document.querySelectorAll(".textnav");
+let textlinkvisible = document.querySelectorAll("#textnav");
 let verticalNavBar = document.querySelector(".navigation");
 let body = document.querySelector("body");
 let bodyHeight = body.offsetHeight;
@@ -261,9 +262,18 @@ for (let w = 0; w < dotlink.length; w++) {
     });   
 }
 
-
-
-window.addEventListener("scroll", function(){
+for (let i = 0; i < sections.length; i++) {
+    if (pageYOffset > demiBodyheight) {
+        verticalNavBar.style.opacity = "1";
+    } else if (pageYOffset > sections[i].offsetTop) {
+        for (let v = 0; v < textlink.length; v++) {
+            textlink[v].style.opacity = "0";
+        }
+        textlink[i].style.opacity = "1";
+    }
+    
+}
+/*window.addEventListener("scroll", function(){
     if(pageYOffset < demiBodyheight) {
         verticalNavBar.style.opacity = "0";
     }
@@ -292,7 +302,27 @@ window.addEventListener("scroll", function(){
         }
         document.querySelector("#textnav5").style.opacity = "1";
     }
-})
+})*/
+
+
+// fonction flip box 
+
+let buttonsflip = document.querySelectorAll(".buttonflip");
+let buttonsflipreverse = document.querySelectorAll(".buttonflipreverse");
+
+for (let c = 0; c < buttonsflip.length; c++) {
+    buttonsflip[c].addEventListener('click', function(){
+        this.parentElement.parentElement.classList.add("flip-box_flip");
+        this.parentElement.parentElement.classList.remove("flip-box_flipreverse");
+    })
+}
+
+for (let c = 0; c < buttonsflipreverse.length; c++) {
+    buttonsflipreverse[c].addEventListener('click', function(){
+        this.parentElement.parentElement.classList.add("flip-box_flipreverse");
+        this.parentElement.parentElement.classList.remove("flip-box_flip");
+    })
+}
 
 
 
