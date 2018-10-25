@@ -251,6 +251,31 @@ let demiBodyheight = bodyHeight/2;
 let sections = document.querySelectorAll("section");
 let documentHeight = bodyHeight * sections.length;
 
+window.addEventListener("scroll", function(){
+for (let i = 0; i < sections.length; i++) {
+    let t = i + 1 ;
+    let sectionTop = sections[i].offsetTop;
+    let sectionBottom = sectionTop + sections[i].offsetHeight;
+    let sectionMiddle = sectionBottom / 2;
+    let sectionTopNext = sections[i].nextElementSibling.offsetTop;
+    let sectionBottomNext = sectionTopNext + sections[i].nextElementSibling.offsetHeight;
+    let sectionMiddleNext = sectionBottomNext / 2;
+    let section1Bottom = sections[0].offsetTop + sections[0].offsetHeight;
+    let sectionMiddle1 = section1Bottom / 2 ;
+            if(pageYOffset < sectionMiddle1) {
+                verticalNavBar.style.opacity = "0";
+            } else if  ( pageYOffset >= sectionMiddle1 && pageYOffset >= sectionTop && pageYOffset <= sectionBottom) {
+                verticalNavBar.style.opacity = "1";
+                for (let v = 0; v < textlink.length; v++) {
+                    textlink[v].style.opacity = "0";
+                }
+                dotlink[i].previousElementSibling.style.opacity = "1";
+                dotlink[i].style.backgroundColor = "black";
+            }
+        }
+   })  
+
+
 
 for (let w = 0; w < dotlink.length; w++) {
     dotlink[w].addEventListener("click", function(){
@@ -262,18 +287,7 @@ for (let w = 0; w < dotlink.length; w++) {
     });   
 }
 
-for (let i = 0; i < sections.length; i++) {
-    if (pageYOffset > demiBodyheight) {
-        verticalNavBar.style.opacity = "1";
-    } else if (pageYOffset > sections[i].offsetTop) {
-        for (let v = 0; v < textlink.length; v++) {
-            textlink[v].style.opacity = "0";
-        }
-        textlink[i].style.opacity = "1";
-    }
-    
-}
-/*window.addEventListener("scroll", function(){
+/* window.addEventListener("scroll", function(){
     if(pageYOffset < demiBodyheight) {
         verticalNavBar.style.opacity = "0";
     }
@@ -302,7 +316,7 @@ for (let i = 0; i < sections.length; i++) {
         }
         document.querySelector("#textnav5").style.opacity = "1";
     }
-})*/
+}) */
 
 
 // fonction flip box 
@@ -323,6 +337,10 @@ for (let c = 0; c < buttonsflipreverse.length; c++) {
         this.parentElement.parentElement.classList.remove("flip-box_flip");
     })
 }
+
+document.querySelector(".page3").addEventListener('mouseover',function(){
+    document.querySelector(".rate").style.transform = "scale(1)";
+})
 
 
 
