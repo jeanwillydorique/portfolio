@@ -335,16 +335,31 @@ for (let c = 0; c < buttonsflipreverse.length; c++) {
 }
 
 document.querySelector(".page3").addEventListener('mouseover',function(){
-    document.querySelector(".rate").style.transform = "scale(1)";
-    document.querySelector(".rateborder").style.transform = "scale(1)";
+    progress(barHTML, 80);
+    progress(barCSS, 70);
+    progress(barJS, 65);
+    progress(barPHP, 50);
 })
 
 document.querySelector(".page3").addEventListener('mouseout',function(){
-    document.querySelector(".rate").style.transform = "scale(0.2)";
-    document.querySelector(".rateborder").style.transform = "scale(0.2)";
+    
 })
 
 
+//progress bar 
+
+let barHTML = document.querySelector('.barHTML');
+let barCSS = document.querySelector('.barCSS');
+let barJS = document.querySelector('.barJS');
+let barPHP = document.querySelector('.barPHP');
+
+
+
+
+function progress(element,widthrate) {
+        element.style.width = widthrate + '%'; 
+        element.innerHTML = widthrate * 1 + '%';
+}
 
 
 

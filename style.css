@@ -622,123 +622,62 @@ background-color: black;
     align-items: center;
 }
 .nuagedemotsimg{
-    height: 100%;
+    height: 150%;
     width: auto;
-    filter: grayscale(100%);
+    filter: grayscale(50%);
 }
 
 .codeskylls{
-    height: 80%;
-    width: 40%;
+    height: 60%;
+    width: 35%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
-
-.HTML, .JS{
-    height: 10%;
+.skills{
+    height: 20%;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items: center; 
 }
-
-.HTMLimg, .JSimg{
-    height: 100%;
-    width: auto;
-}
-
-.PHPrateCSS{
-    height: 80%;
-    width: 100%;
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-}
-
-.CSS, .PHP{
-    height: 100%;
-    width: 12%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.ratenorme{
-    height: 100%;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.norme{
-    height: 95%;
-    width: 95%;
-    padding: 0;
-    margin: 0;
-    background: transparent;
-    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0% 50%);
-    display: flex;
-    flex-direction: column
-}
-
-.lignehaut, .lignebas{
-    height: 50%;
-    width: 100%;
-    display: flex;
-}
-.lignehaut1{
-    height: 100%;
-    width: 50%;
-    border: 1px solid black;
-}
-.lignehaut2{
-    height: 100%;
-    width: 50%;
-    border: 1px solid black;
-}
-
-.rate{
-    height: 99%;
-    width: 99%;
-    /*background-image: url(./Images/fond/crossword.png);*/
-    background-color: black;
-    clip-path: polygon(50% 25%, 62% 50%, 50% 73%, 41% 50%);
-    transform: scale(0.2);
-    transition: 0.5s;
-    position: absolute;
-}
-
-.lignehautIn, .lignebasIn{
-    height: 50%;
-    width: 100%;
-    display: flex;
-}
-.lignehaut1In{
-    height: 100%;
-    width: 50%;
-    border: 1px solid dodgerblue;
-}
-.lignehaut2In{
-    height: 100%;
-    width: 50%;
-    border: 1px solid dodgerblue;
-}
-.rateborder{
-    height: 100%;
-    width: 100%;
-    background-color: dodgerblue;
-    clip-path: polygon(50% 25%, 62% 50%, 50% 73%, 41% 50%);
-    transform: scale(0.2);
-    transition: 0.5s;
-    position: absolute;
-}
-.rate:hover{
-    transform: scale(1);
-}
-.CSSimg, .PHPimg{
+.skills img{
     height: auto;
-    width: 100%;
+    width: 15%;
+}
+.progress{
+    height: 30%;
+    width: 80%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.progress-bar{
+    height: 100%;
+    width: 0%;
+    background-color: black;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Caveat Brush', cursive;
+    color: white;
+}
+.barHTML, .barCSS, .barJS, .barPHP{
+    transition: 1.5s;
+}
+.barHTML{
+    background-color: #EB5F0F;
+}
+.barCSS{
+    background-color: #3C9CD7;
+}
+.barJS{
+    background-color: #F3C029;
+}
+.barPHP{
+    background-color: #8397CA;
 }
 /* page 4 */
 .page4{
@@ -986,6 +925,8 @@ footer{
     color: black;
     font-size: 1rem;
 }
+
+
 
 
 
