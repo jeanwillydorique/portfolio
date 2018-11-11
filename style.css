@@ -927,6 +927,71 @@ footer{
 }
 
 
+/* media Query
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+
+} 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+section{
+    height: 50%;
+    width: 100%;
+}
+
+.elementpage{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex; 
+    flex-direction: column;
+}
+
+.slideshow {
+    height: 50%;
+    width: 100%;
+}
+
+.clicktoscroll{
+    display: none;
+}
+
+.navigation{
+    display: none;  
+}
+.barHTML {
+    width : 80% ;
+}
+.barCSS {
+    width : 70% ;
+}
+.barJS {
+    width : 65% ;
+}
+.barPHP {
+    width : 50% ;
+}
+
+.buttonflip{
+    display:none;
+}
+
+} 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+} 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+
+}
 
 
