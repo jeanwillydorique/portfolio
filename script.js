@@ -335,10 +335,10 @@ for (let c = 0; c < buttonsflipreverse.length; c++) {
 }
 
 document.querySelector(".page3").addEventListener('mouseover',function(){
-    progress(barHTML, 80);
+    progress(barHTML, 70);
     progress(barCSS, 70);
-    progress(barJS, 65);
-    progress(barPHP, 50);
+    progress(barJS, 60);
+    progress(barPHP, 60);
 })
 
 document.querySelector(".page3").addEventListener('mouseout',function(){

@@ -239,6 +239,7 @@ li:not(.dotnavigation)  {
     justify-content: center;
     align-items: center;
 }
+
 .animationtext{
     height: 50%;
     width: 50%;
@@ -664,6 +665,9 @@ background-color: black;
     font-family: 'Caveat Brush', cursive;
     color: white;
 }
+.progress-bar p{
+    display: none;
+}
 .barHTML, .barCSS, .barJS, .barPHP{
     transition: 1.5s;
 }
@@ -855,6 +859,34 @@ background-color: black;
     background-size: cover;
   }
 
+  #fbfpage51_1{
+    height: 30%;
+    width: 30%;
+
+    background-image: url("Images/WordPress-logotype-standard.png");
+
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .boxtext51{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.boxtext51 a p {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 2vw;
+    padding: 10%;
+    color : white;
+    background:rgba(0,0,0, 0.6);
+  }
+
 
 /* footer */
 footer{
@@ -865,7 +897,6 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .contactcard{
@@ -922,9 +953,12 @@ footer{
 .contacttexte p{
     margin: 0;
     padding: 0;
+    font-family: 'Caveat Brush', cursive;
     color: black;
     font-size: 1rem;
 }
+
+
 
 
 /* media Query
@@ -955,7 +989,20 @@ section{
     flex-direction: column;
 }
 
+.imgmobile{
+
+   background-image: url(/Images/imgslider1.jpg);
+   height: 100%;
+   width: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin: 0;
+   padding: 0;
+}
+
 .slideshow {
+    display: none;
     height: 50%;
     width: 100%;
 }
@@ -968,22 +1015,73 @@ section{
     display: none;  
 }
 .barHTML {
-    width : 80% ;
+    width : 70% ;
 }
 .barCSS {
     width : 70% ;
 }
 .barJS {
-    width : 65% ;
+    width : 60% ;
 }
 .barPHP {
-    width : 50% ;
+    width : 60% ;
 }
 
-.buttonflip{
+.buttonflip, .buttonflipreverse{
     display:none;
 }
 
+  
+  .flip-box-inner, .flip-box-innerP4, .flip-box-innerP51 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  
+  .flip-box-front, .flip-box-frontP4, .flip-box-frontP51, .flip-box-back, .flip-box-backP4, .flip-box-backP51 {
+    backface-visibility: unset;
+    position: relative;
+  }
+
+  .flip-box-back, .flip-box-backP4, .flip-box-backP51 {
+    transform: none;
+    background-color: white;
+  }
+
+  .progress-bar p{
+    display: block;
+    font-size: 10px;
+    color: black;
+}
+
+.contactcard{
+    display: flex;
+    justify-content: space-around;
+    height: 70%;
+    width: 100%;
+}
+.contacttexte p{
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 4vw;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.boxtext51{
+    width: 80%;
+    height: 80%;
+  }
+
+.boxtext51 a p {
+    font-size: 4vw;
+    background:rgba(0,0,0, 0.6);
+  }
 } 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
